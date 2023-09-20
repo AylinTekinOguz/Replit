@@ -20,12 +20,12 @@ reversed **-> "**fun is Java**"**
         String s ="Java is fun";
         String reversed = "";
 
-       String arr[]= s.split(" ");
+       String arr[]= s.split("");
 
         System.out.println(Arrays.toString(arr)); //[Java, is, fun]
 
         for (int i = arr.length-1; i >=0; i--) {
-            reversed=reversed+arr[i]+" ";
+            reversed=reversed+arr[i];
         }
         System.out.println(reversed);
 
