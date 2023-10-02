@@ -14,25 +14,13 @@ Output: a s
         String tekrarli = "";
 
         for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if (str.indexOf(ch) != str.lastIndexOf(ch)) {
-                tekrarli = tekrarli + ch;
-
+            char c = str.charAt(i);
+            // Eğer karakter daha önce işlenmemişse
+            if (str.indexOf(c) == i && str.lastIndexOf(c) != i) {
+                tekrarli += c+" ";
             }
-
         }
-        System.out.println(tekrarli); //aasasas
-
-        String tekrarli2="";
-
-        for (int i = 0; i < tekrarli.length(); i++) {
-            char ch = str.charAt(i);
-            if (tekrarli.indexOf(ch) != tekrarli.lastIndexOf(ch)) {
-                tekrarli2 = tekrarli2 + ch;
-            }
-
-        }
-        System.out.println(tekrarli2);
+        System.out.println(tekrarli);
     }
 
     }
